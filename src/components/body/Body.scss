@@ -1,0 +1,23 @@
+@import '../../shared';
+
+.body {
+    padding: 20px;
+
+    &__h2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__fillingText {
+        text-align: center;
+        display: inline-block;
+        font-size: rem(40px);
+
+        &--filled {
+            font-weight: bold;
+            border-bottom: 5px solid $black;
+        }
+    }
+}
