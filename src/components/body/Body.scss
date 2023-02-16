@@ -2,8 +2,9 @@
 
 .body {
     padding: 20px;
+    height: 200px;
 
-    &__h2 {
+    &__content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -11,13 +12,25 @@
     }
 
     &__fillingText {
-        text-align: center;
         display: inline-block;
         font-size: rem(40px);
 
         &--filled {
+            display: inline-block;
             font-weight: bold;
             border-bottom: 5px solid $black;
+        }
+
+        &--name {
+            min-width: 150px;
+        }
+
+        &--showName {
+            min-width: auto;
+        }
+
+        &--exclamationMark {
+            display: inline-block;
         }
     }
 }

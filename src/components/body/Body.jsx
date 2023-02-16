@@ -1,12 +1,26 @@
 import './Body.scss';
 
-export default function Body(props) {
+export default function Body({shouldShowMessageProp, name}) { 
+
+  let nameClasses = "body__fillingText body__fillingText--name";
+
+  if(shouldShowMessageProp) {
+    nameClasses += " body__fillingText--showName";
+  }
+
   return (
         <section className="body">
-            <h2 className="body__h2">
+            <div className="body__content">
                 <span className="body__fillingText body__fillingText--preFilling">Welcome back</span> 
-                <span className="body__fillingText body__fillingText--filled"> {props.userName}!</span>  
-            </h2>
+                <div className="body__fillingText body__fillingText--filled">
+                  <span 
+                    className={nameClasses}
+                    > 
+                      {name}
+                  </span>  
+                  <span className="body__fillingText body__fillingText--exclamationMark">!</span>
+                </div>
+            </div>
         </section>
   )
 }
