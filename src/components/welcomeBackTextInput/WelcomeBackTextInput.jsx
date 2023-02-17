@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './WelcomeBackTextInput.scss';
 
 function WelcomeBackTextInput({name, onNameChange, onNameSubmit}) {
     return (
